@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #About to use for loop to Do the task
 for  ((Count=1; Count<=10; Count++))  ; do
 echo "Best School"
