@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#I am going to provide 10 output using while loop
+Count=10
+while((Count>=1)) ; do
+echo "Best School"
+((Count--))
+done;
