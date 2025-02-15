@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#This script will output Best school 10 times using while loop with the word Hi on the 9th line
+Count=9
+while((Count>=0));do
+	echo "Best School"
+	if [ "$Count" -eq 1 ] ;then
+		echo "Hi"
+	fi
+((Count--))
+done;
