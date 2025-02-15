@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This codes uses Untill loop to out put ten text
+Count=10
+until((Count>0)) ; 
+do
+   echo"Best School"
+((Count--))
+done;
