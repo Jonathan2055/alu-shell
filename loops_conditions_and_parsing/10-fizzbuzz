@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
-#This script is going to output Best school 10 times using while loop With certain conditions
+# This script outputs numbers from 1 to 100 with FizzBuzz conditions
+
 Count=1
-while((Count<=10));do
-	if [  "$((Count%3))" -eq 0  ] &&  [ "$((Count%5))" -eq 0  ] ;then
-		echo "FizzBuzz"
-	elif [ "$((Count%3))" -eq 0 ] ;then
-		echo "Fizz"
-	elif [ "$((Count%5))" -eq 0 ] ;then
-		echo "Buzz"
-	else 
-		echo "$Count"
-	fi
-((Count++))
-done;
+while ((Count <= 100)); do
+    if [ "$((Count % 3))" -eq 0 ] && [ "$((Count % 5))" -eq 0 ]; then
+        echo "FizzBuzz"
+    elif [ "$((Count % 3))" -eq 0 ]; then
+        echo "Fizz"
+    elif [ "$((Count % 5))" -eq 0 ]; then
+        echo "Buzz"
+    else
+        echo "$Count"
+    fi
+    ((Count++))
+done
