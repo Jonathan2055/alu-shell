@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script is to output Best school 10 times using while loop With certain conditions
+#This script is going to output Best school 10 times using while loop With certain conditions
 Count=1
 while((Count<=10));do
 	if [  "$((Count%3))" -eq 0  ] &&  [ "$((Count%5))" -eq 0  ] ;then
