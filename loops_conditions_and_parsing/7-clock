@@ -8,5 +8,5 @@ while((Count<=12));do
 		echo "$Minutes"
 		((Minutes++))
 	done;
-((COUNT++))
+((Count++))
 done;
