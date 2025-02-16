@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This Script  displays The content of the current directory In a list format only the part of the name after the first dash is displayed
+Files="$(ls)"
+for i in $Files;
+do
+	New=$(find . -maxdepth 1 -name "$i" |cut -d "/" -f2 | cut -d "-" -f2)
+	echo "$New"
+done

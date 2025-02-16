@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#script to output 20 numbers and customized outputs using case statement with Badluck message from either China, Japan, or italy
+Count=1
+while((Count<=20));do
+	echo "$Count"
+	case $Count in
+		4) echo "bad luck from China"
+			;;
+		9) echo "bad luck from Japan"
+			;;
+		17) echo "bad luck from Italy"
+			;;
+	esac
+((Count++))
+done;
