@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Create a file to store the script's Process ID (PID)  
 sudo bash -c "echo $$ > /var/run/myscript.pid"
 
