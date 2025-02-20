@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Save the script's Process ID (PID) to a file for tracking  
+sudo bash -c "echo $$ > /var/run/myscript.pid"
+
+# Handle termination signals  
+trap 'echo "Received SIGINT (Ctrl+C), but the script will continue running."' SIGINT  
+trap 'echo "Received SIGTERM, cleaning up and exiting..."; sudo rm -f /var/run/myscript.pid; exit' SIGTERM  
+trap 'echo "Received SIGQUIT, removing PID file and exiting..."; sudo rm -f /var/run/myscript.pid; exit' SIGQUIT  
+
+# Infinite loop to keep the script running  
+while :  
+do  
+    echo "To infinity and beyond"  # Print message repeatedly  
+    sleep 2  # Pause for 2 seconds  
+done  
+
