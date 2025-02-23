@@ -2,15 +2,14 @@
 # Save the script's Process ID (PID) to a file for tracking  
 sudo bash -c "echo $$ > /var/run/myscript.pid"
 
-# Handle termination signals  
-trap 'echo "Received SIGINT (Ctrl+C), but the script will continue running."' SIGINT  
-trap 'echo "Received SIGTERM, cleaning up and exiting..."; sudo rm -f /var/run/myscript.pid; exit' SIGTERM  
-trap 'echo "Received SIGQUIT, removing PID file and exiting..."; sudo rm -f /var/run/myscript.pid; exit' SIGQUIT  
+# Define trap handlers for signals
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'echo "I hate the kill command"; sudo rm -f /var/run/myscript.pid; exit' SIGTERM
+trap 'sudo rm -f /var/run/myscript.pid; exit' SIGQUIT
 
-# Infinite loop to keep the script running  
-while :  
-do  
-    echo "To infinity and beyond"  # Print message repeatedly  
-    sleep 2  # Pause for 2 seconds  
-done  
-
+# Infinite loop
+while :
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
